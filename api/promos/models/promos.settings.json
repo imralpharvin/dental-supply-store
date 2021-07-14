@@ -11,23 +11,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Company": {
+    "Title": {
       "type": "string"
     },
-    "Link": {
+    "PdfLink": {
       "type": "string"
     },
-    "Image": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+    "ImageLink": {
+      "type": "string"
     }
   }
 }
