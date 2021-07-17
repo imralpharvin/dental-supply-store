@@ -1,7 +1,9 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import logo from "../assets/images/logo.png"
+import { BsSearch } from "react-icons/bs"
 import { FiAlignJustify } from "react-icons/fi"
+import { FaUser, FaPhone } from "react-icons/fa"
 
 const Navbar = () => {
   const [show, setShow] = useState(false)
@@ -43,6 +45,11 @@ const Navbar = () => {
           >
             Promotions
           </Link>
+          <FaUser className="navbar-link" />
+          <BsSearch className="navbar-link" />
+          <button>
+            <p>Contact</p> <FaPhone className="icon-margin" />
+          </button>
         </section>
       </div>
     </nav>

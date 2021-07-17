@@ -1,6 +1,9 @@
 import React, { Fragment } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
-const PromotionsList = ({ promos }) => {
+const PromotionsList = () => {
+  const data = useStaticQuery(query)
+  const promos = data.allStrapiPromos.nodes
   return (
     <section className="items-list">
       {promos.map(promo => {
@@ -24,5 +27,17 @@ const PromotionsList = ({ promos }) => {
     </section>
   )
 }
+
+export const query = graphql`
+  {
+    allStrapiPromos {
+      nodes {
+        ImageLink
+        PdfLink
+        Title
+      }
+    }
+  }
+`
 
 export default PromotionsList

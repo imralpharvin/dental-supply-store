@@ -15,5 +15,8 @@ module.exports = {
         collectionTypes: [`promos`, `products`],
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }
