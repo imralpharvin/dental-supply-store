@@ -1,11 +1,14 @@
 import React from "react"
 import Layout from "../components/Layout"
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 export default function Home() {
   return (
     <div>
-      <Layout>Hello world!</Layout>
+      <Layout>
+        <main className="page">
+          <p>Hello world!</p>
+        </main>
+      </Layout>
     </div>
   )
 }

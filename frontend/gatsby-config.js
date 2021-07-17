@@ -12,7 +12,7 @@ module.exports = {
       options: {
         apiURL: `https://dental-supply-store.herokuapp.com`,
         queryLimit: 1000, // Defaults to 100
-        collectionTypes: [`promos`],
+        collectionTypes: [`promos`, `products`],
       },
     },
   ],

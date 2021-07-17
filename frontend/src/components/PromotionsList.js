@@ -1,31 +1,28 @@
 import React, { Fragment } from "react"
-import styled from "styled-components"
 
 const PromotionsList = ({ promos }) => {
   return (
-    <StyledContainer>
+    <section className="items-list">
       {promos.map(promo => {
         const { id, Title, PdfLink, ImageLink } = promo
 
         return (
           <Fragment key={id}>
-            <a href={PdfLink} target="_blank" rel="noopener noreferrer">
+            <div className="item">
               <img
                 src={ImageLink}
                 alt={Title}
-                style={{ width: "200px", height: "200px" }}
+                style={{ width: "300px", height: "auto" }}
               />
-            </a>
+              <a href={PdfLink} target="_blank" rel="noopener noreferrer">
+                <button>View Promotions</button>
+              </a>
+            </div>
           </Fragment>
         )
       })}
-    </StyledContainer>
+    </section>
   )
 }
-
-const StyledContainer = styled.div`
-  align: center;
-  text-align: center;
-`
 
 export default PromotionsList
